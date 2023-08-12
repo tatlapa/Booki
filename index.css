@@ -351,6 +351,7 @@ main .section_hebergement .container-hebergement .container_05 .text_hebergement
 
 main .section_hebergement .text_hebergement_end {
     font-weight: 700;
+    margin-top:15px;
 }
 
 
@@ -385,7 +386,14 @@ main .section_activites .container-activites .container_003 {
     width: 100%;
     box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.10);
     border-radius: 20px;
+}
 
+.tablet-image {
+    display: none;
+}
+
+.desktop-image {
+    display: none;
 }
 
 main .section_activites .container-activites .container_000 .text_activites_0,
@@ -509,6 +517,11 @@ gap:15px;
             order: 2;
     }
 
+    main .section_hebergement .text_hebergement_end {
+        margin-top:30px;
+    }
+    
+
     main .section_populaire {
         order: 2;
         border-radius: 15px;
@@ -528,6 +541,19 @@ gap:15px;
     main .section_activites .container-activites {
         grid-template-columns: repeat(4, minmax(0, 1fr)); 
         grid-template-rows: repeat(1, minmax(0, 1fr));
+        gap:30px;
+    }
+
+    .mobile-image {
+        display: none;
+    }
+
+    .tablet-image {
+        display: flex;
+    }
+    
+    .desktop-image {
+        display: none;
     }
 
 
@@ -567,5 +593,17 @@ gap:15px;
         display: grid;
         grid-template-columns: repeat(1, minmax(0, 1fr)); 
         grid-template-rows: repeat(3, minmax(0, 1fr));
+    }
+
+    .mobile-image {
+        display: none;
+    }
+
+    .tablet-image {
+        display: none;
+    }
+    
+    .desktop-image {
+        display: flex;
     }
  }
