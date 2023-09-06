@@ -2,6 +2,10 @@ html {
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Raleway&display=swap');
 }
 
+h2 {
+    margin: 0;
+}
+
 h4 {
     margin:0;
 }
@@ -23,7 +27,8 @@ body {
     font-family: 'Raleway', sans-serif;
     font-size: 16px;  
     margin: 0;
-    width: auto;
+    min-width: 330px;
+    max-width: 1440px;
     height: auto;
 }
 
@@ -154,6 +159,7 @@ text-indent: -9999px;
 main .info_group .filter_bar {
     display: flex;
     flex-direction: column;
+    gap: 20px;
 }
 
 main .info_group .filter_bar .filter {
@@ -260,6 +266,7 @@ main .section_populaire {
     padding-right: 20px;
     padding-bottom: 30px;
     padding-top: 10px;
+    gap:20px;
 }
 
 
@@ -273,7 +280,7 @@ main .section_populaire .title {
 main .section_populaire .container-section {
     display: grid;
     grid-template-rows: repeat(3, minmax(0, 1fr));
-    gap:15px;
+    gap:20px;
     
 }
 
@@ -310,6 +317,7 @@ main .section_hebergement {
     background-color: white;
     height: auto;
     margin: 20px;
+    gap:15px;
 }
 
 main .section_hebergement .title_hebergement {
@@ -361,7 +369,7 @@ main .section_activites {
     background-color: white;
     height: auto;
     margin: 30px;
-
+    gap:30px;
 }
 
 main .section_activites .title_activites {
@@ -374,6 +382,7 @@ main .section_activites .container-activites {
     display: grid;
     grid-template-rows: repeat(4, minmax(0, 1fr));
     gap:15px;   
+    align-items: stretch;
 }
 
 main .section_activites .container-activites .container_000,
@@ -386,6 +395,7 @@ main .section_activites .container-activites .container_003 {
     width: 100%;
     box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.10);
     border-radius: 20px;
+    
 }
 
 .tablet-image {
@@ -423,11 +433,11 @@ flex-direction: column;
 gap:15px;
 }
 
-@media (min-width: 1024px) { 
+@media (min-width: 768px) { 
 
     body {
-        margin-left: 50px;
-        margin-right: 50px;
+        margin-left: 20px;
+        margin-right: 20px;
     }
 
     header .navbar {
@@ -483,6 +493,8 @@ gap:15px;
         color: white;
     }
 
+   
+
     main .info_group .filter_bar .filter_col {  
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -504,7 +516,9 @@ gap:15px;
         padding:30px;
         border-radius: 15px;
         margin: 0;
+        gap:30px;
     }
+
     
     main .section_hebergement .container-hebergement {
         display: grid;
@@ -525,13 +539,14 @@ gap:15px;
     main .section_populaire {
         order: 2;
         border-radius: 15px;
-        padding:30px;
+        padding:20px;
     }
 
     main .section_populaire .container-section {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr)); 
         grid-template-rows: repeat(1, minmax(0, 1fr));
+        width: 100%;
     }
 
     main .section_activites {
@@ -570,8 +585,14 @@ gap:15px;
     }
  }
 
- @media (min-width: 1440px) { 
+ @media (min-width: 1024px) { 
    
+    main .info_group .filter_bar {
+        flex-direction: row ;
+        gap: 15px;
+        align-items: center;
+    }
+
     .section_group {
         display: flex;
         flex-direction: row;
