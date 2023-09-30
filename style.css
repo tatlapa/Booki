@@ -1,3 +1,7 @@
+h1 {
+    margin: 0;
+}
+
 h2 {
     margin: 0;
     font-size: 22px;
@@ -18,11 +22,6 @@ p {
 
 * {
     font-family: 'Raleway', sans-serif;
-}
-
-button p {
-    font-size: 18px;
-    font-weight: 700;
 }
 
 body {
@@ -142,6 +141,8 @@ align-items: center;
 justify-content: center;
 cursor: pointer;
 color: white;
+font-size: 18px;
+font-weight: 700;
 }
 
 main .info_group .container .button_search .loupe {
@@ -349,8 +350,7 @@ main .section_activites .container-activites .card-activites .text-activites  {
    padding:20px;
 }
 
-
-main footer {
+footer {
     background-color: #F2F2F2;
     display: flex;
     flex-direction: row;
@@ -364,9 +364,9 @@ footer h2 {
 font-size: 18px;
 }
 
-main footer .footer_0,
-main footer .footer_1,
-main footer .footer_2 {
+footer .footer_0,
+footer .footer_1,
+footer .footer_2 {
 display: flex;
 flex-direction: column;
 gap:15px;
@@ -410,6 +410,7 @@ gap:15px;
     width: 61px;
     height: 19px;
     margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .pin {
@@ -420,6 +421,11 @@ gap:15px;
     border-radius: 20px 0px 0px 20px;
     align-items: center;
     justify-content: center;
+}
+
+.fa-chart-line {
+    font-size: 18px;
+    color: #0065FC;
 }
 
     /* Breakpoint tablette */
@@ -462,7 +468,7 @@ gap:15px;
         height: 200px;
     }
 
-    main footer {
+    footer {
         gap:70px;
     }
 }
@@ -510,8 +516,9 @@ gap:15px;
     border-bottom: solid 2px #0065FC;
     color: #0065FC;
     }
+
     main .info_group {
-        margin: 20;
+        margin: 20px;
     }
 
     main .info_group .container .search-bar input {
@@ -521,13 +528,13 @@ gap:15px;
     main .info_group .container .button_search {   
         border-radius: 15px; 
         color: white;
-        }
+    }
 
     main .info_group .container .button_search .text-button {
         text-indent: -9999px;
-        font-size: 18px;
-        font-weight: 700;
     }
+
+
     
     main .info_group .container .button_search .loupe {
         display: flex;
@@ -554,7 +561,6 @@ gap:15px;
     }
    
     main .section_hebergement {
-        order: 1;
         background-color: white;
         padding: 20px;
         border-radius: 15px;
@@ -565,18 +571,21 @@ gap:15px;
 
     main .section_hebergement .container-hebergement {
         display: grid;
-        grid-template-rows: repeat(6, minmax(0, 1fr));
         grid-template-columns: repeat(1, minmax(0, 1fr));
     }
     
-
-    main .section_hebergement .container-hebergement .card:nth-child(6) {
-            order: 2;
+    main .section_hebergement .container-hebergement .order-card:nth-child(2) {
+         grid-row: 6;
     }
+
+    main .section_hebergement .container-hebergement .order-card:nth-child(5) {
+        grid-row: 2;
+   }
+
+
     
     main .section_populaire {
         display: flex;
-        order: 2;
         border-radius: 0;
         padding: 30px 20px;
         width: auto;
@@ -589,22 +598,17 @@ gap:15px;
         width: 100%;
     }
 
-    main .section_activites {
-        order: 3;
-    }
-
     main .section_activites .container-activites {
         grid-template-rows: repeat(4, minmax(0, 1fr));
         grid-template-columns: repeat(1, minmax(0, 1fr));
         gap:15px
     }
 
-    main footer {
+    footer {
         background-color: #F2F2F2;
         display: flex;
         flex-direction: column;
         grid-template-columns: repeat(3, minmax(0, 1fr));
-        order:4;
         gap: 50px;
     }
 
@@ -623,6 +627,7 @@ gap:15px;
 
     main .info_group .filter_bar .filter_col .filter_button {
         width: auto;
+        font-size: 14px;
     }
 
  }
