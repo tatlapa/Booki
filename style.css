@@ -1,4 +1,5 @@
 h1 {
+    font-size: 22px;
     margin: 0;
 }
 
@@ -9,6 +10,7 @@ h2 {
 
 h3 {
     margin:0;
+    font-size: 16px;
 }
     
 a {
@@ -85,17 +87,13 @@ main .info_group {
     display:flex;
     flex-direction: column;
     gap:35px;
-    margin-left:20px;
-    margin-right:20px;
     margin-bottom: 19px;
 }
 
-main .info_group .headline .text_0 {
-    font-size: 22px;  
-}
-
-main .info_group .headline .text_1 {
-    font-size: 16px; 
+main .info_group .headline {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 main .info_group .container {
@@ -105,19 +103,17 @@ main .info_group .container {
 
 main .info_group .container .search-bar {
     display: flex;
-    width: 100%; 
-    height: 49px;
-    
+    height: 49px;  
 }
 
 main .info_group .container .search-bar input {
-    text-align: center;
     font-size: 18px;
     font-weight: 700;
-    width: 20%;
     border: 1px solid var(--grey, #F2F2F2);
     border-right: transparent;
+    padding: 14px 24px;
 }
+
 
 main .info_group .container .search-bar .map {
     background-color: #F2F2F2;
@@ -133,7 +129,6 @@ main .info_group .container .search-bar .map {
 main .info_group .container .button_search {
 display: flex;
 background-color: #0065FC;
-width: 15%;
 border-radius: 0px 15px 15px 0px;
 border-color: transparent;
 box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -143,6 +138,7 @@ cursor: pointer;
 color: white;
 font-size: 18px;
 font-weight: 700;
+padding: 16px;
 }
 
 main .info_group .container .button_search .loupe {
@@ -168,7 +164,6 @@ main .info_group .filter_bar .filter_col {
 main .info_group .filter_bar .filter_col .filter_button {
 display: flex;
 gap:10px;
-justify-content: center;
 align-items: center;
 border-radius: 25px;
 border: 2px solid #D9D9D9;
@@ -179,6 +174,7 @@ cursor: pointer;
 width: fit-content;
 padding: 4px 19px;
 font-size: 17px;
+white-space: nowrap;
 }
 
 main .info_group .filter_bar .filter_col .filter_button:hover {
@@ -200,7 +196,7 @@ main .info_group .info .circle_info {
     justify-content: center;
     border: solid #D9D9D9 1px;
     border-radius: 50% ;
-   
+    padding: 8px;
 }
 
 main .section_group {
@@ -342,7 +338,7 @@ main .section_activites .container-activites .card-activites {
     width: 100%;
     box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.10);
     border-radius: 20px;
-    
+    overflow: hidden;
 }
 
 
@@ -355,8 +351,8 @@ footer {
     display: flex;
     flex-direction: row;
     grid-template-rows: repeat(3, minmax(0, 1fr));
-    gap:290px;
-    padding: 20px;
+    justify-content: space-between;
+    padding: 20px 25% 20px 20px;
     margin-top: 35px;
 }
 
@@ -396,7 +392,6 @@ gap:15px;
 }
 
 .images-activites {
-    border-radius: 20px 20px 0px 0px;
     height: 380px;
     object-fit: cover;
 }
@@ -416,11 +411,10 @@ gap:15px;
 .pin {
     display: flex;
     background-color: #F2F2F2;
-    width: 50px;
-    height: 50px;
     border-radius: 20px 0px 0px 20px;
     align-items: center;
     justify-content: center;
+    padding: 0px 15px;
 }
 
 .fa-chart-line {
@@ -518,11 +512,17 @@ gap:15px;
     }
 
     main .info_group {
-        margin: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 0;
+    }
+
+    main .info_group .container .search-bar {
+        width: 100%;  
     }
 
     main .info_group .container .search-bar input {
-        width: 70%;      
+        width: 100%;
     }
 
     main .info_group .container .button_search {   
@@ -556,7 +556,7 @@ gap:15px;
 
     main .section_group {
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column;
         gap:0;
     }
    
@@ -628,6 +628,10 @@ gap:15px;
     main .info_group .filter_bar .filter_col .filter_button {
         width: auto;
         font-size: 14px;
+    }
+
+    .image-logo {
+        margin-bottom: 0;
     }
 
  }
